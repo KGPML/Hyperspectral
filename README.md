@@ -72,6 +72,8 @@ Description of the toolbox
 	* Extracts patches of given size
 	* Oversamples the training set for balancing the classes
 
+- `Spatial_dataset.py` provides a highly flexible Dataset class for handling the Indian Pines data.
+
 - `IndianPinesTF.ipynb` builds the TensorFlow Convolutional Neural Network and defines the training and evaluation ops:
 
 	* inference() - Builds the model as far as is required for running the network forward to make predictions.
