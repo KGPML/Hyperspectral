@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="UTF-8">
+    <title>Hyperspectral by KGPML</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="stylesheets/normalize.css" media="screen">
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen">
+    <link rel="stylesheet" type="text/css" href="stylesheets/github-light.css" media="screen">
+  </head>
+  <body>
+    <section class="page-header">
+      <h1 class="project-name">Hyperspectral</h1>
+      <h2 class="project-tagline"></h2>
+      <a href="https://github.com/KGPML/Hyperspectral" class="btn">View on GitHub</a>
+      <a href="https://github.com/KGPML/Hyperspectral/zipball/master" class="btn">Download .zip</a>
+      <a href="https://github.com/KGPML/Hyperspectral/tarball/master" class="btn">Download .tar.gz</a>
+    </section>
+
+    <section class="main-content">
+      <h1>
+<a id="deep-learning-for-land-cover-classification-in-hyperspectral-images" class="anchor" href="#deep-learning-for-land-cover-classification-in-hyperspectral-images" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Deep Learning for Land-cover Classification in Hyperspectral Images</h1>
+
+<p>Hyperspectral images are images captured in multiple bands of the electromagnetic spectrum. This project is focussed at the development of Deep Learned Artificial Neural Networks for robust landcover classification in hyperspectral images. Land-cover classification is the task of assigning to every pixel, a class label that represents the type of land-cover present in the location of the pixel. It is an image segmentation/scenelabeling task. The following diagram describes the task.</p>
+
+<hr>
+
+<p><img src="https://github.com/KGPML/Hyperspectral/blob/master/images/landcover-classification.png?raw=True" width="800"> </p>
+
+<h2>
+<a id="convolutional-neural-network" class="anchor" href="#convolutional-neural-network" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Convolutional Neural Network</h2>
+
+<p>(CNN or ConvNet) are a special category of artificial neural networks designed for processing data with a gridlike structure. The ConvNet architecture is based on sparse interactions and parameter sharing and is highly effective for efficient learning of spatial invariances in images. There are four kinds of layers in a typical ConvNet architecture: convolutional (conv), pooling (pool), fullyconnected (affine) and rectifying linear unit (ReLU). Each convolutional layer transforms one set of feature maps into another set of feature maps by convolution with a set of filters.</p>
+
+<h2>
+<a id="architecture-of-convolutional-neural-network-used" class="anchor" href="#architecture-of-convolutional-neural-network-used" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Architecture of Convolutional Neural Network used</h2>
+
+<p><strong>input- [conv - relu - maxpool] x 2 - [affine - relu] x 2 - affine - softmax</strong></p>
+
+<p>(Schematic representation below)</p>
+
+<p><img src="https://github.com/KGPML/Hyperspectral/blob/master/images/architecture.png?raw=True" width="800"></p>
+
+<p>The system was trained on a machine with dual Intel Xeon E5-2630 v2 CPUs, 32 GB RAM and NVIDIA Tesla K-20C GPU. </p>
+
+<h2>
+<a id="dataset" class="anchor" href="#dataset" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Dataset</h2>
+
+<p>We have performed our experiments on the <a href="https://engineering.purdue.edu/%7Ebiehl/MultiSpec/hyperspectral.html">Indian Pines Dataset</a>. The following are the particulars of the dataset: </p>
+
+<ul>
+<li>Source: AVIRIS sensor</li>
+<li>Region: Indian Pines test site over north-western Indiana</li>
+<li>Time of the year: June</li>
+<li>Wavelength range: 0.4 – 2.5 micron</li>
+<li>Number of spectral bands: 220</li>
+<li>Size of image: 145x145 pixel</li>
+<li>Number of land-cover classes: 16</li>
+</ul>
+
+<h2>
+<a id="specifics-of-the-learning-algorithm" class="anchor" href="#specifics-of-the-learning-algorithm" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Specifics of the learning algorithm</h2>
+
+<p>The following are the details of the learning algorithm used:</p>
+
+<ul>
+<li>
+<p>Parameter update algorithm used: Mini-batch gradient descent</p>
+
+<ul>
+<li>Batch size: 100</li>
+<li>Learning rate: 0.01</li>
+</ul>
+</li>
+<li><p>Number of steps: until best validation performance</p></li>
+</ul>
+
+<hr>
+
+<h2>
+<a id="performance" class="anchor" href="#performance" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Performance</h2>
+
+<p><img src="https://github.com/KGPML/Hyperspectral/blob/master/images/accuracy-bar.png?raw=True" width="800"> </p>
+
+<p><img src="https://github.com/KGPML/Hyperspectral/blob/master/images/decoding.png?raw=True" width="800"> </p>
+
+<hr>
+
+<hr>
+
+<h2>
+<a id="description-of-the-repository" class="anchor" href="#description-of-the-repository" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Description of the repository</h2>
+
+<ul>
+<li>
+<p><code>IndianPines_DataSet_Preparation_Without_Augmentation.ipynb</code> does the following operations:</p>
+
+<ul>
+<li>Loads the Indian Pines dataset</li>
+<li>Scales the input between [0,1]</li>
+<li>Mean normalizes the channels</li>
+<li>Makes training and test splits</li>
+<li>Extracts patches of given size</li>
+<li>Oversamples the training set for balancing the classes</li>
+</ul>
+</li>
+<li><p><code>Spatial_dataset.py</code> provides a highly flexible Dataset class for handling the Indian Pines data.</p></li>
+<li>
+<p><code>IndianPinesTF.ipynb</code> builds the TensorFlow Convolutional Neural Network and defines the training and evaluation ops:</p>
+
+<ul>
+<li>inference() - Builds the model as far as is required for running the network forward to make predictions.</li>
+<li>loss() - Adds to the inference model the layers required to generate loss.</li>
+<li>training() - Adds to the loss model the Ops required to generate and apply gradients.</li>
+<li>evaluation() - Calcuates the classification accuracy </li>
+</ul>
+</li>
+<li><p><code>convolutional_feed.ipynb</code> Trains and evaluates the Neural Network using a feed dictionary</p></li>
+<li><p><code>Decoder_Spatial.ipynb</code> Generates the landcover classification of an input hyperspectral image for a given trained network</p></li>
+<li><p><code>credibility.ipynb</code> Summarizes the predictions of an ensemble and produces the land-cover classification and class-wise confusion matrix.</p></li>
+</ul>
+
+<hr>
+
+<h2>
+<a id="acknowledgement" class="anchor" href="#acknowledgement" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Acknowledgement</h2>
+
+<p>This repository was developed by <a href="http://santara.github.io">Anirban Santara</a>, <a href="https://www.linkedin.com/in/pranoot-hatwar-27553579">Pranoot Hatwar</a>, Ankit Singh and <a href="https://www.linkedin.com/in/kaustubh-mani-48363584">Kaustubh Mani</a> under the supervision of <a href="http://cse.iitkgp.ac.in/%7Epabitra/">Prof. Pabitra Mitra</a> during June-July, 2016 at the Deprtment of Computer Science and Engineering, Indian Institute of Technology Kharagpur, India. The project is funded by <a href="http://www.sac.gov.in/">Satellite Applications Centre, Indian Space Research Organization (SAC-ISRO)</a>.  </p>
+
+      <footer class="site-footer">
+        <span class="site-footer-owner"><a href="https://github.com/KGPML/Hyperspectral">Hyperspectral</a> is maintained by <a href="https://github.com/KGPML">KGPML</a>.</span>
+
+        <span class="site-footer-credits">This page was generated by <a href="https://pages.github.com">GitHub Pages</a> using the <a href="https://github.com/jasonlong/cayman-theme">Cayman theme</a> by <a href="https://twitter.com/jasonlong">Jason Long</a>.</span>
+      </footer>
+
+    </section>
+
+  
+  </body>
+</html>
