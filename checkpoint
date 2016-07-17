@@ -1,0 +1,5 @@
+model_checkpoint_path: "model-spatial-21X21.ckpt-3999"
+all_model_checkpoint_paths: "model-spatial-21X21.ckpt-999"
+all_model_checkpoint_paths: "model-spatial-21X21.ckpt-1999"
+all_model_checkpoint_paths: "model-spatial-21X21.ckpt-2999"
+all_model_checkpoint_paths: "model-spatial-21X21.ckpt-3999"

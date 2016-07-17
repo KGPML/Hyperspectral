@@ -1,1 +1,3 @@
 Data/*
+*.ckpt*
+.ipynb_checkpoints/*
