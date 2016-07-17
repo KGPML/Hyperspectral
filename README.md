@@ -60,8 +60,8 @@ Performance
 
 <hr>
 
-Description of the toolbox
---------------------------
+Description of the repository
+-----------------------------
 
 - `IndianPines_DataSet_Preparation_Without_Augmentation.ipynb` does the following operations:
 	
@@ -86,3 +86,9 @@ Description of the toolbox
 - `Decoder_Spatial.ipynb` Generates the landcover classification of an input hyperspectral image for a given trained network
 
 - `credibility.ipynb` Summarizes the predictions of an ensemble and produces the land-cover classification and class-wise confusion matrix.
+
+<hr>
+
+Acknowledgement
+---------------
+This repository was developed by [Anirban Santara](http://santara.github.io), [Pranoot Hatwar](https://www.linkedin.com/in/pranoot-hatwar-27553579), Ankit Singh and [Kaustubh Mani](https://www.linkedin.com/in/kaustubh-mani-48363584) under the supervision of [Prof. Pabitra Mitra](http://cse.iitkgp.ac.in/~pabitra/) during June-July, 2016 at the Deprtment of Computer Science and Engineering, Indian Institute of Technology Kharagpur, India. The project is funded by [Satellite Applications Centre, Indian Space Research Organization (SAC-ISRO)](http://www.sac.gov.in/).  
