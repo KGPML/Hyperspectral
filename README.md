@@ -16,6 +16,7 @@ Architecture of Convolutional Neural Network used
 -------------------------------------------------
 
 **input- [conv - relu - maxpool] x 2 - [affine - relu] x 2 - affine - softmax**
+
 (Schematic representation below)
 
 <img src="https://github.com/KGPML/Hyperspectral/blob/master/images/architecture.png?raw=True" width="800">
@@ -62,4 +63,24 @@ Performance
 Description of the toolbox
 --------------------------
 
-- ``
+- `IndianPines_DataSet_Preparation_Without_Augmentation.ipynb` does the following operations:
+	
+	* Loads the Indian Pines dataset
+	* Scales the input between [0,1]
+	* Mean normalizes the channels
+	* Makes training and test splits
+	* Extracts patches of given size
+	* Oversamples the training set for balancing the classes
+
+- `IndianPinesTF.ipynb` builds the TensorFlow Convolutional Neural Network and defines the training and evaluation ops:
+
+	* inference() - Builds the model as far as is required for running the network forward to make predictions.
+	* loss() - Adds to the inference model the layers required to generate loss.
+	* training() - Adds to the loss model the Ops required to generate and apply gradients.
+	* evaluation() - Calcuates the classification accuracy 
+
+- `convolutional_feed.ipynb` Trains and evaluates the Neural Network using a feed dictionary
+
+- `Decoder_Spatial.ipynb` Generates the landcover classification of an input hyperspectral image for a given trained network
+
+- `credibility.ipynb` Summarizes the predictions of an ensemble and produces the land-cover classification and class-wise confusion matrix.
