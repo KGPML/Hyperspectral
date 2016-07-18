@@ -5,7 +5,7 @@ Hyperspectral images are images captured in multiple bands of the electromagneti
 
 <hr>
 
-<img src="https://github.com/KGPML/Hyperspectral/blob/master/images/landcover-classification.png?raw=True" width="800"> 
+<img src="https://github.com/KGPML/Hyperspectral/blob/master/images/landcover-classification.png?raw=True" width="600"> 
 
 Convolutional Neural Network
 ----------------------------
@@ -19,7 +19,7 @@ Architecture of Convolutional Neural Network used
 
 (Schematic representation below)
 
-<img src="https://github.com/KGPML/Hyperspectral/blob/master/images/architecture.png?raw=True" width="800">
+<img src="https://github.com/KGPML/Hyperspectral/blob/master/images/architecture.png?raw=True" width="600">
 
 The system was trained on a machine with dual Intel Xeon E5-2630 v2 CPUs, 32 GB RAM and NVIDIA Tesla K-20C GPU. 
 
@@ -52,9 +52,9 @@ The following are the details of the learning algorithm used:
 Performance
 -----------
 
-<img src="https://github.com/KGPML/Hyperspectral/blob/master/images/accuracy-bar.png?raw=True" width="800"> 
+<img src="https://github.com/KGPML/Hyperspectral/blob/master/images/accuracy-bar.png?raw=True" width="600"> 
 
-<img src="https://github.com/KGPML/Hyperspectral/blob/master/images/decoding.png?raw=True" width="800"> 
+<img src="https://github.com/KGPML/Hyperspectral/blob/master/images/decoding.png?raw=True" width="600"> 
 
 <hr>
 
