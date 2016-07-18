@@ -26,7 +26,7 @@ The system was trained on a machine with dual Intel Xeon E5-2630 v2 CPUs, 32 GB 
 Dataset
 -------
 
-We have performed our experiments on the [Indian Pines Dataset](https://engineering.purdue.edu/~biehl/MultiSpec/hyperspectral.html). The following are the particulars of the dataset: 
+We have performed our experiments on the [Indian Pines Dataset](https://purr.purdue.edu/publications/1947/1). The following are the particulars of the dataset: 
 
 * Source: AVIRIS sensor
 * Region: Indian Pines test site over north-western Indiana
