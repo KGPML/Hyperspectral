@@ -19,7 +19,7 @@ from __future__ import print_function
 import math
 
 import tensorflow as tf
-
+import patch_size
 
 # In[3]:
 
@@ -28,7 +28,7 @@ NUM_CLASSES = 16    # change to 16 in originaldata tell anirban
 
 # We have chopped the IndianPines image into 28x28 pixels patches. 
 # We will classify each patch
-IMAGE_SIZE = 21
+IMAGE_SIZE = patch_size.patch_size
 KERNEL_SIZE = 3 #before it was 5 for 37x37
 CHANNELS = 220
 IMAGE_PIXELS = IMAGE_SIZE * IMAGE_SIZE * CHANNELS

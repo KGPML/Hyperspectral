@@ -74,6 +74,8 @@ Description of the repository
 
 - `Spatial_dataset.py` provides a highly flexible Dataset class for handling the Indian Pines data.
 
+- `patch_size.py` specify the required patch-size here.
+
 - `IndianPinesTF.ipynb` builds the TensorFlow Convolutional Neural Network and defines the training and evaluation ops:
 
 	* inference() - Builds the model as far as is required for running the network forward to make predictions.
@@ -105,6 +107,7 @@ In order to make sure all codes run smoothly, you should have the following dire
 |-- credibility.ipynb
 |-- IndianPinesTF.py
 |-- Spatial_dataset.py
+|-- patch_size.py
 |-- Data
 |   |-- Indian_pines_gt.mat
 |   |-- Indian_pines.mat
@@ -112,6 +115,14 @@ In order to make sure all codes run smoothly, you should have the following dire
 
 ```
 
+- Set the required patch-size value (eg. 11, 21, etc) in `patch_size.py` and run the following notebooks in order:
+	1. IndianPines_DataSet_Preparation_Without_Augmentation.ipynb
+	2. convolutional_feed.ipynb
+	3. Decoder_Spatial.ipynb (set the required checkpoint to be used for decoding in the `model_name` variable)
+
+Outputs will be displayed in the notebooks.
+
+<hr>
 
 Acknowledgement
 ---------------
