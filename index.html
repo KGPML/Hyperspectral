@@ -26,7 +26,7 @@
 
 <hr>
 
-<p><img src="https://github.com/KGPML/Hyperspectral/blob/master/images/landcover-classification.png?raw=True" width="800"> </p>
+<p><img src="https://github.com/KGPML/Hyperspectral/blob/master/images/landcover-classification.png?raw=True" width="600"> </p>
 
 <h2>
 <a id="convolutional-neural-network" class="anchor" href="#convolutional-neural-network" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Convolutional Neural Network</h2>
@@ -40,7 +40,7 @@
 
 <p>(Schematic representation below)</p>
 
-<p><img src="https://github.com/KGPML/Hyperspectral/blob/master/images/architecture.png?raw=True" width="800"></p>
+<p><img src="https://github.com/KGPML/Hyperspectral/blob/master/images/architecture.png?raw=True" width="400"></p>
 
 <p>The system was trained on a machine with dual Intel Xeon E5-2630 v2 CPUs, 32 GB RAM and NVIDIA Tesla K-20C GPU. </p>
 
@@ -81,9 +81,9 @@
 <h2>
 <a id="performance" class="anchor" href="#performance" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Performance</h2>
 
-<p><img src="https://github.com/KGPML/Hyperspectral/blob/master/images/accuracy-bar.png?raw=True" width="800"> </p>
+<p><img src="https://github.com/KGPML/Hyperspectral/blob/master/images/accuracy-bar.png?raw=True" width="600"> </p>
 
-<p><img src="https://github.com/KGPML/Hyperspectral/blob/master/images/decoding.png?raw=True" width="800"> </p>
+<p><img src="https://github.com/KGPML/Hyperspectral/blob/master/images/decoding.png?raw=True" width="600"> </p>
 
 <hr>
 
@@ -106,6 +106,7 @@
 </ul>
 </li>
 <li><p><code>Spatial_dataset.py</code> provides a highly flexible Dataset class for handling the Indian Pines data.</p></li>
+<li><p><code>patch_size.py</code> specify the required patch-size here.</p></li>
 <li>
 <p><code>IndianPinesTF.ipynb</code> builds the TensorFlow Convolutional Neural Network and defines the training and evaluation ops:</p>
 
@@ -120,6 +121,46 @@
 <li><p><code>Decoder_Spatial.ipynb</code> Generates the landcover classification of an input hyperspectral image for a given trained network</p></li>
 <li><p><code>credibility.ipynb</code> Summarizes the predictions of an ensemble and produces the land-cover classification and class-wise confusion matrix.</p></li>
 </ul>
+
+<hr>
+
+<h2>
+<a id="setting-up-the-experiment-" class="anchor" href="#setting-up-the-experiment-" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Setting up the experiment </h2>
+
+<ul>
+<li>Download the Indian Pines data-set from <a href="https://purr.purdue.edu/publications/1947/1">here</a>.</li>
+<li>Make a directory named <code>Data</code> within the current working directory and copy the downloaded .mat files <code>Indian_pines.mat</code> and <code>Indian_pines_gt.mat</code> in this directory.</li>
+</ul>
+
+<p>In order to make sure all codes run smoothly, you should have the following directory subtree structure under your current working directory:</p>
+
+<pre><code>|-- Decoder_Spatial.ipynb
+|-- IndianPines_DataSet_Preparation_Without_Augmentation.ipynb
+|-- IndianPinesTF.ipynb
+|-- convolutional_feed.ipynb
+|-- credibility.ipynb
+|-- IndianPinesTF.py
+|-- Spatial_dataset.py
+|-- patch_size.py
+|-- Data
+|   |-- Indian_pines_gt.mat
+|   |-- Indian_pines.mat
+
+
+</code></pre>
+
+<ul>
+<li>Set the required patch-size value (eg. 11, 21, etc) in <code>patch_size.py</code> and run the following notebooks in order:
+
+<ol>
+<li>IndianPines_DataSet_Preparation_Without_Augmentation.ipynb</li>
+<li>convolutional_feed.ipynb</li>
+<li>Decoder_Spatial.ipynb (set the required checkpoint to be used for decoding in the <code>model_name</code> variable)</li>
+</ol>
+</li>
+</ul>
+
+<p>Outputs will be displayed in the notebooks.</p>
 
 <hr>
 
