@@ -19,7 +19,7 @@ Architecture of Convolutional Neural Network used
 
 (Schematic representation below)
 
-<img src="https://github.com/KGPML/Hyperspectral/blob/master/images/architecture.png?raw=True" width="600">
+<img src="https://github.com/KGPML/Hyperspectral/blob/master/images/architecture.png?raw=True" width="400">
 
 The system was trained on a machine with dual Intel Xeon E5-2630 v2 CPUs, 32 GB RAM and NVIDIA Tesla K-20C GPU. 
 
