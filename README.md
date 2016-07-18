@@ -89,6 +89,30 @@ Description of the repository
 
 <hr>
 
+Setting up the experiment 
+-------------------------
+
+- Download the Indian Pines data-set from [here](https://purr.purdue.edu/publications/1947/1).
+- Make a directory named `Data` within the current working directory and copy the downloaded .mat files `Indian_pines.mat` and `Indian_pines_gt.mat` in this directory.
+
+In order to make sure all codes run smoothly, you should have the following directory subtree structure under your current working directory:
+
+```
+|-- Decoder_Spatial.ipynb
+|-- IndianPines_DataSet_Preparation_Without_Augmentation.ipynb
+|-- IndianPinesTF.ipynb
+|-- convolutional_feed.ipynb
+|-- credibility.ipynb
+|-- IndianPinesTF.py
+|-- Spatial_dataset.py
+|-- Data
+|   |-- Indian_pines_gt.mat
+|   |-- Indian_pines.mat
+
+
+```
+
+
 Acknowledgement
 ---------------
 This repository was developed by [Anirban Santara](http://santara.github.io), [Pranoot Hatwar](https://www.linkedin.com/in/pranoot-hatwar-27553579), Ankit Singh and [Kaustubh Mani](https://www.linkedin.com/in/kaustubh-mani-48363584) under the supervision of [Prof. Pabitra Mitra](http://cse.iitkgp.ac.in/~pabitra/) during June-July, 2016 at the Deprtment of Computer Science and Engineering, Indian Institute of Technology Kharagpur, India. The project is funded by [Satellite Applications Centre, Indian Space Research Organization (SAC-ISRO)](http://www.sac.gov.in/).  
