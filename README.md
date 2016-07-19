@@ -54,7 +54,7 @@ Performance
 
 <img src="https://github.com/KGPML/Hyperspectral/blob/master/images/accuracy-bar.png?raw=True" width="600"> 
 
-<img src="https://github.com/KGPML/Hyperspectral/blob/master/images/decoding.png?raw=True" width="600"> 
+<img src="https://github.com/KGPML/Hyperspectral/blob/master/images/decoding.jpg?raw=True" width="600"> 
 
 <hr>
 
@@ -76,16 +76,27 @@ Description of the repository
 
 - `patch_size.py` specify the required patch-size here.
 
-- `IndianPinesTF.ipynb` builds the TensorFlow Convolutional Neural Network and defines the training and evaluation ops:
+- `IndianPinesCNN.ipynb` builds the TensorFlow Convolutional Neural Network and defines the training and evaluation ops:
 
 	* inference() - Builds the model as far as is required for running the network forward to make predictions.
 	* loss() - Adds to the inference model the layers required to generate loss.
 	* training() - Adds to the loss model the Ops required to generate and apply gradients.
 	* evaluation() - Calcuates the classification accuracy 
 
-- `convolutional_feed.ipynb` Trains and evaluates the Neural Network using a feed dictionary
+- `CNN_feed.ipynb` Trains and evaluates the Neural Network using a feed dictionary
 
-- `Decoder_Spatial.ipynb` Generates the landcover classification of an input hyperspectral image for a given trained network
+- `Decoder_Spatial_CNN.ipynb` Generates the landcover classification of an input hyperspectral image for a given trained network
+
+- `IndianPinesMLP.py` builds the TensorFlow Multi-layer Perceptron and defines the training and evaluation ops:
+
+	* inference() - Builds the model as far as is required for running the network forward to make predictions.
+	* loss() - Adds to the inference model the layers required to generate loss.
+	* training() - Adds to the loss model the Ops required to generate and apply gradients.
+	* evaluation() - Calcuates the classification accuracy 
+
+- `MLP_feed.ipynb` Trains and evaluates the MLP using a feed dictionary
+
+- `Decoder_Spatial_MLP.ipynb` Generates the landcover classification of an input hyperspectral image for a given trained network
 
 - `credibility.ipynb` Summarizes the predictions of an ensemble and produces the land-cover classification and class-wise confusion matrix.
 
@@ -100,12 +111,15 @@ Setting up the experiment
 In order to make sure all codes run smoothly, you should have the following directory subtree structure under your current working directory:
 
 ```
-|-- Decoder_Spatial.ipynb
 |-- IndianPines_DataSet_Preparation_Without_Augmentation.ipynb
-|-- IndianPinesTF.ipynb
-|-- convolutional_feed.ipynb
+|-- Decoder_Spatial_CNN.ipynb
+|-- Decoder_Spatial_MLP.ipynb
+|-- IndianPinesCNN.ipynb
+|-- CNN_feed.ipynb
+|-- MLP_feed.ipynb
 |-- credibility.ipynb
-|-- IndianPinesTF.py
+|-- IndianPinesCNN.py
+|-- IndianPinesMLP.py
 |-- Spatial_dataset.py
 |-- patch_size.py
 |-- Data
@@ -117,8 +131,8 @@ In order to make sure all codes run smoothly, you should have the following dire
 
 - Set the required patch-size value (eg. 11, 21, etc) in `patch_size.py` and run the following notebooks in order:
 	1. IndianPines_DataSet_Preparation_Without_Augmentation.ipynb
-	2. convolutional_feed.ipynb (specify the number of fragments in the training and test data in the variables `TRAIN_FILES` and `TEST_FILES`)
-	3. Decoder_Spatial.ipynb (set the required checkpoint to be used for decoding in the `model_name` variable)
+	2. CNN_feed.ipynb OR MLP_feed.ipynb (specify the number of fragments in the training and test data in the variables `TRAIN_FILES` and `TEST_FILES`)
+	3. Decoder_Spatial_CNN.ipynb OR Decoder_Spatial_MLP.ipynb (set the required checkpoint to be used for decoding in the `model_name` variable)
 
 Outputs will be displayed in the notebooks.
 
