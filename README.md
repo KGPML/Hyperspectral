@@ -52,9 +52,9 @@ The following are the details of the learning algorithm used:
 Performance
 -----------
 
-<img src="https://github.com/KGPML/Hyperspectral/blob/master/images/accuracy-bar.png?raw=True" width="600"> 
+<img src="https://github.com/KGPML/Hyperspectral/blob/master/images/accuracy-bar.png?raw=True" width="800"> 
 
-<img src="https://github.com/KGPML/Hyperspectral/blob/master/images/decoding.jpg?raw=True" width="600"> 
+<img src="https://github.com/KGPML/Hyperspectral/blob/master/images/decoding.jpg?raw=True" width="800"> 
 
 <hr>
 
