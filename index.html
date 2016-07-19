@@ -83,7 +83,7 @@
 
 <p><img src="https://github.com/KGPML/Hyperspectral/blob/master/images/accuracy-bar.png?raw=True" width="600"> </p>
 
-<p><img src="https://github.com/KGPML/Hyperspectral/blob/master/images/decoding.png?raw=True" width="600"> </p>
+<p><img src="https://github.com/KGPML/Hyperspectral/blob/master/images/decoding.jpg?raw=True" width="600"> </p>
 
 <hr>
 
@@ -108,7 +108,7 @@
 <li><p><code>Spatial_dataset.py</code> provides a highly flexible Dataset class for handling the Indian Pines data.</p></li>
 <li><p><code>patch_size.py</code> specify the required patch-size here.</p></li>
 <li>
-<p><code>IndianPinesTF.ipynb</code> builds the TensorFlow Convolutional Neural Network and defines the training and evaluation ops:</p>
+<p><code>IndianPinesCNN.ipynb</code> builds the TensorFlow Convolutional Neural Network and defines the training and evaluation ops:</p>
 
 <ul>
 <li>inference() - Builds the model as far as is required for running the network forward to make predictions.</li>
@@ -117,8 +117,20 @@
 <li>evaluation() - Calcuates the classification accuracy </li>
 </ul>
 </li>
-<li><p><code>convolutional_feed.ipynb</code> Trains and evaluates the Neural Network using a feed dictionary</p></li>
-<li><p><code>Decoder_Spatial.ipynb</code> Generates the landcover classification of an input hyperspectral image for a given trained network</p></li>
+<li><p><code>CNN_feed.ipynb</code> Trains and evaluates the Neural Network using a feed dictionary</p></li>
+<li><p><code>Decoder_Spatial_CNN.ipynb</code> Generates the landcover classification of an input hyperspectral image for a given trained network</p></li>
+<li>
+<p><code>IndianPinesMLP.py</code> builds the TensorFlow Multi-layer Perceptron and defines the training and evaluation ops:</p>
+
+<ul>
+<li>inference() - Builds the model as far as is required for running the network forward to make predictions.</li>
+<li>loss() - Adds to the inference model the layers required to generate loss.</li>
+<li>training() - Adds to the loss model the Ops required to generate and apply gradients.</li>
+<li>evaluation() - Calcuates the classification accuracy </li>
+</ul>
+</li>
+<li><p><code>MLP_feed.ipynb</code> Trains and evaluates the MLP using a feed dictionary</p></li>
+<li><p><code>Decoder_Spatial_MLP.ipynb</code> Generates the landcover classification of an input hyperspectral image for a given trained network</p></li>
 <li><p><code>credibility.ipynb</code> Summarizes the predictions of an ensemble and produces the land-cover classification and class-wise confusion matrix.</p></li>
 </ul>
 
@@ -134,12 +146,15 @@
 
 <p>In order to make sure all codes run smoothly, you should have the following directory subtree structure under your current working directory:</p>
 
-<pre><code>|-- Decoder_Spatial.ipynb
-|-- IndianPines_DataSet_Preparation_Without_Augmentation.ipynb
-|-- IndianPinesTF.ipynb
-|-- convolutional_feed.ipynb
+<pre><code>|-- IndianPines_DataSet_Preparation_Without_Augmentation.ipynb
+|-- Decoder_Spatial_CNN.ipynb
+|-- Decoder_Spatial_MLP.ipynb
+|-- IndianPinesCNN.ipynb
+|-- CNN_feed.ipynb
+|-- MLP_feed.ipynb
 |-- credibility.ipynb
-|-- IndianPinesTF.py
+|-- IndianPinesCNN.py
+|-- IndianPinesMLP.py
 |-- Spatial_dataset.py
 |-- patch_size.py
 |-- Data
@@ -153,9 +168,11 @@
 <li>Set the required patch-size value (eg. 11, 21, etc) in <code>patch_size.py</code> and run the following notebooks in order:
 
 <ol>
-<li>IndianPines_DataSet_Preparation_Without_Augmentation.ipynb</li>
-<li>convolutional_feed.ipynb (specify the number of fragments in the training and test data in the variables <code>TRAIN_FILES</code> and <code>TEST_FILES</code>)</li>
-<li>Decoder_Spatial.ipynb (set the required checkpoint to be used for decoding in the <code>model_name</code> variable)</li>
+<li><code>IndianPines_DataSet_Preparation_Without_Augmentation.ipynb</code></li>
+<li>
+<code>CNN_feed.ipynb</code> OR <code>MLP_feed.ipynb</code> (specify the number of fragments in the training and test data in the variables <code>TRAIN_FILES</code> and <code>TEST_FILES</code>)</li>
+<li>
+<code>Decoder_Spatial_CNN.ipynb</code> OR <code>Decoder_Spatial_MLP.ipynb</code> (set the required checkpoint to be used for decoding in the <code>model_name</code> variable)</li>
 </ol>
 </li>
 </ul>
