@@ -117,7 +117,7 @@ In order to make sure all codes run smoothly, you should have the following dire
 
 - Set the required patch-size value (eg. 11, 21, etc) in `patch_size.py` and run the following notebooks in order:
 	1. IndianPines_DataSet_Preparation_Without_Augmentation.ipynb
-	2. convolutional_feed.ipynb
+	2. convolutional_feed.ipynb (specify the number of fragments in the training and test data in the variables `TRAIN_FILES` and `TEST_FILES`)
 	3. Decoder_Spatial.ipynb (set the required checkpoint to be used for decoding in the `model_name` variable)
 
 Outputs will be displayed in the notebooks.
@@ -126,4 +126,4 @@ Outputs will be displayed in the notebooks.
 
 Acknowledgement
 ---------------
-This repository was developed by [Anirban Santara](http://santara.github.io), [Pranoot Hatwar](https://www.linkedin.com/in/pranoot-hatwar-27553579), Ankit Singh and [Kaustubh Mani](https://www.linkedin.com/in/kaustubh-mani-48363584) under the supervision of [Prof. Pabitra Mitra](http://cse.iitkgp.ac.in/~pabitra/) during June-July, 2016 at the Deprtment of Computer Science and Engineering, Indian Institute of Technology Kharagpur, India. The project is funded by [Satellite Applications Centre, Indian Space Research Organization (SAC-ISRO)](http://www.sac.gov.in/).  
+This repository was developed by [Anirban Santara](http://santara.github.io), Ankit Singh, [Pranoot Hatwar](https://www.linkedin.com/in/pranoot-hatwar-27553579) and [Kaustubh Mani](https://www.linkedin.com/in/kaustubh-mani-48363584) under the supervision of [Prof. Pabitra Mitra](http://cse.iitkgp.ac.in/~pabitra/) during June-July, 2016 at the Deprtment of Computer Science and Engineering, Indian Institute of Technology Kharagpur, India. The project is funded by [Satellite Applications Centre, Indian Space Research Organization (SAC-ISRO)](http://www.sac.gov.in/).  
