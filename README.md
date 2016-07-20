@@ -9,7 +9,7 @@ Hyperspectral images are images captured in multiple bands of the electromagneti
 
 <hr>
 
-This website describes our explorations with the performance of Multi-Layer Perceptrons and Convolutional Neural Networks at the task of Land-cover Classification in Hyperspectral Images.
+This website describes our explorations with the performance of Multi-Layer Perceptrons and Convolutional Neural Networks at the task of Land-cover Classification in Hyperspectral Images. Currently we perform pixel-wise classification.
 
 <hr>
 Dataset
@@ -26,6 +26,12 @@ We have performed our experiments on the [Indian Pines Dataset](https://purr.pur
 * Number of land-cover classes: 16
 
 <hr>
+Input data format
+=================
+
+Each pixel is described by an `NxN` patch centered at the pixel. `N` denotes the size of spatial context used for making the inference about a given pixel. 
+
+The input data was divided into training set (75%) and a test set (25%).
 
 Hardware used
 =============
