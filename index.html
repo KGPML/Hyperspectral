@@ -131,7 +131,7 @@
 
 <ul>
 <li>
-<p>Parameter update algorithm used: Mini-batch gradient descent</p>
+<p>Parameter update algorithm used: <a href="http://www.jmlr.org/papers/volume12/duchi11a/duchi11a.pdf">Adagrad</a></p>
 
 <ul>
 <li>Batch size: 100</li>
@@ -178,10 +178,14 @@
 <p><code>IndianPinesCNN.ipynb</code> builds the TensorFlow Convolutional Neural Network and defines the training and evaluation ops:</p>
 
 <ul>
-<li>inference() - Builds the model as far as is required for running the network forward to make predictions.</li>
-<li>loss() - Adds to the inference model the layers required to generate loss.</li>
-<li>training() - Adds to the loss model the Ops required to generate and apply gradients.</li>
-<li>evaluation() - Calcuates the classification accuracy </li>
+<li>
+<code>inference()</code> - Builds the model as far as is required for running the network forward to make predictions.</li>
+<li>
+<code>loss()</code> - Adds to the inference model the layers required to generate loss.</li>
+<li>
+<code>training()</code> - Adds to the loss model the Ops required to generate and apply gradients.</li>
+<li>
+<code>evaluation()</code> - Calcuates the classification accuracy </li>
 </ul>
 </li>
 <li><p><code>CNN_feed.ipynb</code> Trains and evaluates the Neural Network using a feed dictionary</p></li>
@@ -190,10 +194,14 @@
 <p><code>IndianPinesMLP.py</code> builds the TensorFlow Multi-layer Perceptron and defines the training and evaluation ops:</p>
 
 <ul>
-<li>inference() - Builds the model as far as is required for running the network forward to make predictions.</li>
-<li>loss() - Adds to the inference model the layers required to generate loss.</li>
-<li>training() - Adds to the loss model the Ops required to generate and apply gradients.</li>
-<li>evaluation() - Calcuates the classification accuracy </li>
+<li>
+<code>inference()</code> - Builds the model as far as is required for running the network forward to make predictions.</li>
+<li>
+<code>loss()</code> - Adds to the inference model the layers required to generate loss.</li>
+<li>
+<code>training()</code> - Adds to the loss model the Ops required to generate and apply gradients.</li>
+<li>
+<code>evaluation()</code> - Calcuates the classification accuracy </li>
 </ul>
 </li>
 <li><p><code>MLP_feed.ipynb</code> Trains and evaluates the MLP using a feed dictionary</p></li>
@@ -232,7 +240,7 @@
 </code></pre>
 
 <ul>
-<li>Set the required patch-size value (eg. 11, 21, etc) in <code>patch_size.py</code> and run the following notebooks in order:
+<li>Set the required <code>patch-size</code> value (eg. 11, 21, etc) in <code>patch_size.py</code> and run the following notebooks in order:
 
 <ol>
 <li><code>IndianPines_DataSet_Preparation_Without_Augmentation.ipynb</code></li>
