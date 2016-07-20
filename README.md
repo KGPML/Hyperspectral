@@ -39,10 +39,10 @@ Multi-Layer Perceptron
 
 Multi-Layer Perceptron (MLP) is an artificial neural network with one or more hidden layers of neurons. MLP is capable of modelling highly non-linear functions between the input and output and forms the basis of Deep-learning Neural Network (DNN) models.
 
-Architecture of Convolutional Neural Network used
+Architecture of Multi-Layer Perceptron used
 -------------------------------------------------
 
-**input- [conv - relu - maxpool] x 2 - [affine - relu] x 2 - affine - softmax**
+**input- [affine - relu] x 3 - affine - softmax**
 
 (Schematic representation below)
 
