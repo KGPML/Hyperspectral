@@ -130,7 +130,7 @@ Decoding generated for different input patch sizes:
 Description of the repository
 =============================
 
-- `IndianPines_DataSet_Preparation_Without_Augmentation.ipynb` does the following operations:
+- `IndianPines_DataSet_Preparation_Without_Augmentation.ipynb` - does the following operations:
 	
 	* Loads the Indian Pines dataset
 	* Scales the input between [0,1]
@@ -139,33 +139,33 @@ Description of the repository
 	* Extracts patches of given size
 	* Oversamples the training set for balancing the classes
 
-- `Spatial_dataset.py` provides a highly flexible Dataset class for handling the Indian Pines data.
+- `Spatial_dataset.py` - provides a highly flexible Dataset class for handling the Indian Pines data.
 
-- `patch_size.py` specify the required patch-size here.
+- `patch_size.py` - specify the required patch-size here.
 
-- `IndianPinesCNN.ipynb` builds the TensorFlow Convolutional Neural Network and defines the training and evaluation ops:
-
-	* `inference()` - Builds the model as far as is required for running the network forward to make predictions.
-	* `loss()` - Adds to the inference model the layers required to generate loss.
-	* `training()` - Adds to the loss model the Ops required to generate and apply gradients.
-	* `evaluation()` - Calcuates the classification accuracy 
-
-- `CNN_feed.ipynb` Trains and evaluates the Neural Network using a feed dictionary
-
-- `Decoder_Spatial_CNN.ipynb` Generates the landcover classification of an input hyperspectral image for a given trained network
-
-- `IndianPinesMLP.py` builds the TensorFlow Multi-layer Perceptron and defines the training and evaluation ops:
+- `IndianPinesCNN.ipynb`- builds the TensorFlow Convolutional Neural Network and defines the training and evaluation ops:
 
 	* `inference()` - Builds the model as far as is required for running the network forward to make predictions.
 	* `loss()` - Adds to the inference model the layers required to generate loss.
 	* `training()` - Adds to the loss model the Ops required to generate and apply gradients.
 	* `evaluation()` - Calcuates the classification accuracy 
 
-- `MLP_feed.ipynb` Trains and evaluates the MLP using a feed dictionary
+- `CNN_feed.ipynb` - trains and evaluates the Neural Network using a feed dictionary
 
-- `Decoder_Spatial_MLP.ipynb` Generates the landcover classification of an input hyperspectral image for a given trained network
+- `Decoder_Spatial_CNN.ipynb` - generates the landcover classification of an input hyperspectral image for a given trained network
 
-- `credibility.ipynb` Summarizes the predictions of an ensemble and produces the land-cover classification and class-wise confusion matrix.
+- `IndianPinesMLP.py` - builds the TensorFlow Multi-layer Perceptron and defines the training and evaluation ops:
+
+	* `inference()` - Builds the model as far as is required for running the network forward to make predictions.
+	* `loss()` - Adds to the inference model the layers required to generate loss.
+	* `training()` - Adds to the loss model the Ops required to generate and apply gradients.
+	* `evaluation()` - Calcuates the classification accuracy 
+
+- `MLP_feed.ipynb` - trains and evaluates the MLP using a feed dictionary
+
+- `Decoder_Spatial_MLP.ipynb` - generates the landcover classification of an input hyperspectral image for a given trained network
+
+- `credibility.ipynb` - summarizes the predictions of an ensemble and produces the land-cover classification and class-wise confusion matrix.
 
 <hr>
 
