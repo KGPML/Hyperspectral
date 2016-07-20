@@ -1,6 +1,0 @@
-model_checkpoint_path: "model-MLP-1X1.ckpt-49999"
-all_model_checkpoint_paths: "model-MLP-1X1.ckpt-45999"
-all_model_checkpoint_paths: "model-MLP-1X1.ckpt-46999"
-all_model_checkpoint_paths: "model-MLP-1X1.ckpt-47999"
-all_model_checkpoint_paths: "model-MLP-1X1.ckpt-48999"
-all_model_checkpoint_paths: "model-MLP-1X1.ckpt-49999"
