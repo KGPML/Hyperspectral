@@ -100,7 +100,7 @@ Specifics of the learning algorithm
 
 The following are the details of the learning algorithm used:
 
-* Parameter update algorithm used: Mini-batch gradient descent
+* Parameter update algorithm used: [Adagrad](http://www.jmlr.org/papers/volume12/duchi11a/duchi11a.pdf)
 	* Batch size: 100
 	* Learning rate: 0.01
 
