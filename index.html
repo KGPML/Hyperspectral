@@ -22,7 +22,7 @@
       <h1>
 <a id="deep-learning-for-land-cover-classification-in-hyperspectral-images" class="anchor" href="#deep-learning-for-land-cover-classification-in-hyperspectral-images" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Deep Learning for Land-cover Classification in Hyperspectral Images</h1>
 
-<p>Hyperspectral images are images captured in multiple bands of the electromagnetic spectrum. This project is focussed at the development of Deep Learned Artificial Neural Networks for robust landcover classification in hyperspectral images. Land-cover classification is the task of assigning to every pixel, a class label that represents the type of land-cover present in the location of the pixel. It is an image segmentation/scenelabeling task. The following diagram describes the task.</p>
+<p>Hyperspectral images are images captured in multiple bands of the electromagnetic spectrum. This project is focussed at the development of Deep Learned Artificial Neural Networks for robust landcover classification in hyperspectral images. Land-cover classification is the task of assigning to every pixel, a class label that represents the type of land-cover present in the location of the pixel. It is an image segmentation/scene labeling task. The following diagram describes the task.</p>
 
 <hr>
 
@@ -30,7 +30,7 @@
 
 <hr>
 
-<p>This website describes our explorations with the performance of Multi-Layer Perceptrons and Convolutional Neural Networks at the task of Land-cover Classification in Hyperspectral Images.</p>
+<p>This website describes our explorations with the performance of Multi-Layer Perceptrons and Convolutional Neural Networks at the task of Land-cover Classification in Hyperspectral Images. Currently we perform pixel-wise classification.</p>
 
 <hr>
 
@@ -50,6 +50,13 @@
 </ul>
 
 <hr>
+
+<h1>
+<a id="input-data-format" class="anchor" href="#input-data-format" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Input data format</h1>
+
+<p>Each pixel is described by an <code>NxN</code> patch centered at the pixel. <code>N</code> denotes the size of spatial context used for making the inference about a given pixel. </p>
+
+<p>The input data was divided into training set (75%) and a test set (25%).</p>
 
 <h1>
 <a id="hardware-used" class="anchor" href="#hardware-used" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Hardware used</h1>
