@@ -145,10 +145,10 @@ Description of the repository
 
 - `IndianPinesCNN.ipynb`- builds the TensorFlow Convolutional Neural Network and defines the training and evaluation ops:
 
-	* `inference()` - Builds the model as far as is required for running the network forward to make predictions.
-	* `loss()` - Adds to the inference model the layers required to generate loss.
-	* `training()` - Adds to the loss model the Ops required to generate and apply gradients.
-	* `evaluation()` - Calcuates the classification accuracy 
+	* `inference()` - builds the model as far as is required for running the network forward to make predictions.
+	* `loss()` - adds to the inference model the layers required to generate loss.
+	* `training()` - adds to the loss model the Ops required to generate and apply gradients.
+	* `evaluation()` - calcuates the classification accuracy 
 
 - `CNN_feed.ipynb` - trains and evaluates the Neural Network using a feed dictionary
 
@@ -156,10 +156,10 @@ Description of the repository
 
 - `IndianPinesMLP.py` - builds the TensorFlow Multi-layer Perceptron and defines the training and evaluation ops:
 
-	* `inference()` - Builds the model as far as is required for running the network forward to make predictions.
-	* `loss()` - Adds to the inference model the layers required to generate loss.
-	* `training()` - Adds to the loss model the Ops required to generate and apply gradients.
-	* `evaluation()` - Calcuates the classification accuracy 
+	* `inference()` - builds the model as far as is required for running the network forward to make predictions.
+	* `loss()` - adds to the inference model the layers required to generate loss.
+	* `training()` - adds to the loss model the Ops required to generate and apply gradients.
+	* `evaluation()` - calcuates the classification accuracy 
 
 - `MLP_feed.ipynb` - trains and evaluates the MLP using a feed dictionary
 
