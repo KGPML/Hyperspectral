@@ -1,6 +1,8 @@
 Deep Learning for Land-cover Classification in Hyperspectral Images
 ===================================================================
 
+### PS: Check out our [latest work](https://arxiv.org/abs/1612.00144) in which we carefully design a novel deep neural network architecture that simultaneously addresses the three biggest challenges of Hyperspectral Image Classification -  large dimensionality, spatial variability of spectral signatures and scarcity of labeled data. It also beats the state-of-the-art performance on three popular datasets and converges significantly faster. Our code is available [here](https://github.com/kaustubh0mani/BASS-Net).
+
 Hyperspectral images are images captured in multiple bands of the electromagnetic spectrum. This project is focussed at the development of Deep Learned Artificial Neural Networks for robust landcover classification in hyperspectral images. Land-cover classification is the task of assigning to every pixel, a class label that represents the type of land-cover present in the location of the pixel. It is an image segmentation/scene labeling task. The following diagram describes the task.
 
 <hr>
