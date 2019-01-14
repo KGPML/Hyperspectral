@@ -1,3 +1,9 @@
+This repository has been ⛔️ DEPRECATED. Please take a look at our fairly recent work: 
+
+**Band-Adaptive Spectral-Spatial Feature Learning Neural Network for Hyperspectral Image Classification** [[paper](https://arxiv.org/abs/1612.00144)] [[Code](https://github.com/kaustubh0mani/BASS-Net)]
+
+
+
 Deep Learning for Land-cover Classification in Hyperspectral Images
 ===================================================================
 
